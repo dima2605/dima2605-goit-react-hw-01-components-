@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 
 export const FriendItem = styled.li`
+  background-color: #fff;
   display: flex;
   align-items: center;
   padding: 6px 12px;
