@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { HistoryHead, HistoryTable } from './TransactionHistory.styled';
 import { TransitionItem } from '../TransactionItem/TransactionItem';
 
@@ -24,3 +26,14 @@ export function TransactionHistory({ items }) {
     </HistoryTable>
   );
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+    })
+  ),
+};
